@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, Dimensions, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native'
 import Colors from '@/constants/Colors';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
@@ -40,6 +40,8 @@ const categories = [
 interface Props {
     onCategoryChanged: (category: string) => void;
 }
+
+const { width, height } = Dimensions.get('window');
 
 const ExploreHeader = ({ onCategoryChanged }: Props) => {
     const scrollRef = useRef<ScrollView>(null);
@@ -125,7 +127,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
+    paddingHorizontal: 24,
     paddingBottom: 16,
   },
 
@@ -135,7 +137,7 @@ const styles = StyleSheet.create({
     gap: 10,
     padding: 14,
     alignItems: 'center',
-    width: 280,
+    width: width * 0.7,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: '#c2c2c2',
     borderRadius: 30,
