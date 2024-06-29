@@ -33,6 +33,21 @@
     "experiments": {
       "typedRoutes": true,
       "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "7b50f7e2-b699-4129-b28a-596be7f76639"
+      }
+    },
+    "owner": "acidmud",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7b50f7e2-b699-4129-b28a-596be7f76639"
     }
   }
 }
