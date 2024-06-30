@@ -91,40 +91,40 @@ const Page = () => {
         ref={scrollRef}
         scrollEventThrottle={16}>
         <Animated.Image
-          source={{ uri: listing.xl_picture_url }}
+          source={{ uri: listing?.xl_picture_url || '' }}
           style={[styles.image, imageAnimatedStyle]}
           resizeMode="cover"
         />
 
         <View style={styles.infoContainer}>
-          <Text style={styles.name}>{listing.name}</Text>
+          <Text style={styles.name}>{listing?.name || ''}</Text>
           <Text style={styles.location}>
-            {listing.room_type} in {listing.smart_location}
+            {listing?.room_type} in {listing?.smart_location}
           </Text>
           <Text style={styles.rooms}>
-            {listing.guests_included} guests · {listing.bedrooms} bedrooms · {listing.beds} bed ·{' '}
-            {listing.bathrooms} bathrooms
+            {listing?.guests_included} guests · {listing?.bedrooms} bedrooms · {listing?.beds} bed ·{' '}
+            {listing?.bathrooms} bathrooms
           </Text>
           <View style={{ flexDirection: 'row', gap: 4 }}>
             <Ionicons name="star" size={16} />
             <Text style={styles.ratings}>
-              {listing.review_scores_rating / 20} · {listing.number_of_reviews} reviews
+              {listing?.review_scores_rating / 20} · {listing?.number_of_reviews} reviews
             </Text>
           </View>
           <View style={styles.divider} />
 
           <View style={styles.hostView}>
-            <Image source={{ uri: listing.host_picture_url }} style={styles.host} />
+            <Image source={{ uri: listing?.host_picture_url }} style={styles.host} />
 
             <View>
-              <Text style={{ fontWeight: '500', fontSize: 16 }}>Hosted by {listing.host_name}</Text>
-              <Text>Host since {listing.host_since}</Text>
+              <Text style={{ fontWeight: '500', fontSize: 16 }}>Hosted by {listing?.host_name}</Text>
+              <Text>Host since {listing?.host_since}</Text>
             </View>
           </View>
 
           <View style={styles.divider} />
 
-          <Text style={styles.description}>{listing.description}</Text>
+          <Text style={styles?.description}>{listing?.description}</Text>
         </View>
       </Animated.ScrollView>
 
@@ -132,7 +132,7 @@ const Page = () => {
         <View
           style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <TouchableOpacity style={styles.footerText}>
-            <Text style={styles.footerPrice}>R${listing.price}</Text>
+            <Text style={styles.footerPrice}>R${listing?.price}</Text>
             <Text>night</Text>
           </TouchableOpacity>
 

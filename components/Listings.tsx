@@ -1,18 +1,29 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { View, Text, FlatList, ListRenderItem, StyleSheet, Image } from 'react-native'
+import { View, Text, ListRenderItem, StyleSheet, Image } from 'react-native'
 import { defaultStyles } from '@/constants/Styles';
 import { Link } from 'expo-router';
-import { TouchableOpacity } from '@gorhom/bottom-sheet';
+import { BottomSheetFlatList, BottomSheetFlatListMethods, TouchableOpacity } from '@gorhom/bottom-sheet';
 import { Ionicons } from '@expo/vector-icons';
 import Animated, { FadeInRight, FadeOutLeft } from 'react-native-reanimated';
 interface Props {
     listings: any[];
     category: string;
+    refresh: number;
 }
 
-const Listings = ({ listings: items, category } : Props) => {
+const Listings = ({ listings: items, refresh, category } : Props) => {
   const [loading, setLoading] = useState<boolean>(false);
-  const listRef = useRef<FlatList>(null);
+  const listRef = useRef<BottomSheetFlatListMethods>(null);
+
+  const scrollListTop = () => {
+    listRef.current?.scrollToOffset({ offset: 0, animated: true });
+  };
+
+  useEffect(() => {
+    if (refresh) {
+      scrollListTop();
+    }
+  }, [refresh]);
 
   useEffect(() => {
     setLoading(true);
@@ -49,10 +60,11 @@ const Listings = ({ listings: items, category } : Props) => {
 
   return (
     <View style={defaultStyles.container}>
-      <FlatList
+       <BottomSheetFlatList
         renderItem={renderRow}
-        ref={listRef}
         data={loading ? [] : items}
+        ref={listRef}
+        ListHeaderComponent={<Text style={styles.info}>{items.length} locais</Text>}
       />
     </View>
   )
