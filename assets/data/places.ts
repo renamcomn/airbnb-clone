@@ -1,26 +1,26 @@
 export const places = [
   {
-    title: "I'm flexible",
+    title: "Busca flexível",
     img: require('@/assets/data/world-0.png'),
   },
   {
-    title: 'United States',
+    title: 'Estados Unidos',
     img: require('@/assets/data/world-1.png'),
   },
   {
-    title: 'Italy',
+    title: 'Itália',
     img: require('@/assets/data/world-2.png'),
   },
   {
-    title: 'Middle East',
+    title: 'Europa',
     img: require('@/assets/data/world-3.png'),
   },
   {
-    title: 'Netherlands',
+    title: 'Holanda',
     img: require('@/assets/data/world-4.png'),
   },
   {
-    title: 'Southeast Asia',
+    title: 'Ásia',
     img: require('@/assets/data/world-5.png'),
   },
 ];

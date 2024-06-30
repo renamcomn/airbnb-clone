@@ -102,13 +102,13 @@ const Page = () => {
             {listing?.room_type} in {listing?.smart_location}
           </Text>
           <Text style={styles.rooms}>
-            {listing?.guests_included} guests · {listing?.bedrooms} bedrooms · {listing?.beds} bed ·{' '}
-            {listing?.bathrooms} bathrooms
+            {listing?.guests_included} hóspede · {listing?.bedrooms} quarto · {listing?.beds} cama ·{' '}
+            {listing?.bathrooms} banheiro
           </Text>
           <View style={{ flexDirection: 'row', gap: 4 }}>
             <Ionicons name="star" size={16} />
             <Text style={styles.ratings}>
-              {listing?.review_scores_rating / 20} · {listing?.number_of_reviews} reviews
+              {listing?.review_scores_rating / 20} · {listing?.number_of_reviews} avaliações
             </Text>
           </View>
           <View style={styles.divider} />
@@ -117,8 +117,8 @@ const Page = () => {
             <Image source={{ uri: listing?.host_picture_url }} style={styles.host} />
 
             <View>
-              <Text style={{ fontWeight: '500', fontSize: 16 }}>Hosted by {listing?.host_name}</Text>
-              <Text>Host since {listing?.host_since}</Text>
+              <Text style={{ fontWeight: '500', fontSize: 16 }}>Anfitriã(o): {listing?.host_name}</Text>
+              <Text>Hospedando desde: {listing?.host_since}</Text>
             </View>
           </View>
 
@@ -133,11 +133,11 @@ const Page = () => {
           style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <TouchableOpacity style={styles.footerText}>
             <Text style={styles.footerPrice}>R${listing?.price}</Text>
-            <Text>night</Text>
+            <Text>noite</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={[defaultStyles.btn, { paddingRight: 20, paddingLeft: 20 }]}>
-            <Text style={defaultStyles.btnText}>Reserve</Text>
+            <Text style={defaultStyles.btnText}>Reservar</Text>
           </TouchableOpacity>
         </View>
       </Animated.View>

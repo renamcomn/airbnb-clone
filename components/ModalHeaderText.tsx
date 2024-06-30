@@ -14,7 +14,7 @@ const ModalHeaderText = () => {
             color: active == 0 ? '#000' : Colors.grey,
             textDecorationLine: active == 0 ? 'underline' : 'none',
           }}>
-          Stays
+          Acomodações
         </Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => setActive(1)}>
@@ -25,7 +25,7 @@ const ModalHeaderText = () => {
             color: active == 1 ? '#000' : Colors.grey,
             textDecorationLine: active == 1 ? 'underline' : 'none',
           }}>
-          Experiences
+          Experiências
         </Text>
       </TouchableOpacity>
     </View>

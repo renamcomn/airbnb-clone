@@ -13,23 +13,23 @@ const AnimatedTouchableOpacity = Animated.createAnimatedComponent(TouchableOpaci
 
 const guestsGropus = [
   {
-    name: 'Adults',
-    text: 'Ages 13 or above',
+    name: 'Adultos',
+    text: '13 anos ou mais',
     count: 0,
   },
   {
-    name: 'Children',
-    text: 'Ages 2-12',
+    name: 'Crianças',
+    text: 'De 2 a 12 anos',
     count: 0,
   },
   {
-    name: 'Infants',
-    text: 'Under 2',
+    name: 'Bebês',
+    text: 'Menor de 2',
     count: 0,
   },
   {
-    name: 'Pets',
-    text: 'Pets allowed',
+    name: 'Animais de estimação',
+    text: 'Animais permitidos',
     count: 0,
   },
 ];
@@ -57,18 +57,18 @@ const Page = () => {
             entering={FadeIn.duration(200)}
             exiting={FadeOut.duration(200)}>
             <Text style={styles.previewText}>Where</Text>
-            <Text style={styles.previewdData}>I'm flexible</Text>
+            <Text style={styles.previewdData}>Busca flexível</Text>
           </AnimatedTouchableOpacity>
         )}
 
-        {openCard == 0 && <Text style={styles.cardHeader}>Where to?</Text>}
+        {openCard == 0 && <Text style={styles.cardHeader}>Para onde?</Text>}
         {openCard == 0 && (
           <Animated.View entering={FadeIn} exiting={FadeOut} style={styles.cardBody}>
             <View style={styles.searchSection}>
               <Ionicons style={styles.searchIcon} name="search" size={20} color="#000" />
               <TextInput
                 style={styles.inputField}
-                placeholder="Search destinations"
+                placeholder="Buscar destinos"
                 placeholderTextColor={Colors.grey}
               />
             </View>
@@ -99,12 +99,12 @@ const Page = () => {
             style={styles.cardPreview}
             entering={FadeIn.duration(200)}
             exiting={FadeOut.duration(200)}>
-            <Text style={styles.previewText}>When</Text>
-            <Text style={styles.previewdData}>Any week</Text>
+            <Text style={styles.previewText}>Quando</Text>
+            <Text style={styles.previewdData}>Uma semana</Text>
           </AnimatedTouchableOpacity>
         )}
 
-        {openCard == 1 && <Text style={styles.cardHeader}>When's your trip?</Text>}
+        {openCard == 1 && <Text style={styles.cardHeader}>Quando é sua viagem?</Text>}
 
         {openCard == 1 && (
           <Animated.View style={styles.cardBody}>
@@ -131,12 +131,12 @@ const Page = () => {
             style={styles.cardPreview}
             entering={FadeIn.duration(200)}
             exiting={FadeOut.duration(200)}>
-            <Text style={styles.previewText}>Who</Text>
-            <Text style={styles.previewdData}>Add guests</Text>
+            <Text style={styles.previewText}>Quem</Text>
+            <Text style={styles.previewdData}>Adicionar hóspedes</Text>
           </AnimatedTouchableOpacity>
         )}
 
-        {openCard == 2 && <Text style={styles.cardHeader}>Who's coming?</Text>}
+        {openCard == 2 && <Text style={styles.cardHeader}>Quem está vindo?</Text>}
 
         {openCard == 2 && (
           <Animated.View style={styles.cardBody}>
@@ -211,7 +211,7 @@ const Page = () => {
                 fontFamily: 'mon-sb',
                 textDecorationLine: 'underline',
               }}>
-              Clear all
+              Remover filtros
             </Text>
           </TouchableOpacity>
 
@@ -224,7 +224,7 @@ const Page = () => {
               style={defaultStyles.btnIcon}
               color={'#fff'}
             />
-            <Text style={defaultStyles.btnText}>Search</Text>
+            <Text style={defaultStyles.btnText}>Buscar</Text>
           </TouchableOpacity>
         </View>
       </Animated.View>

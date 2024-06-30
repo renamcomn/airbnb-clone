@@ -7,11 +7,11 @@ import * as Haptics from 'expo-haptics';
 
 const categories = [
     {
-      name: 'Tiny homes',
+      name: 'Casa triangulares',
       icon: 'home',
     },
     {
-      name: 'Cabins',
+      name: 'Chalés',
       icon: 'house-siding',
     },
     {
@@ -19,19 +19,19 @@ const categories = [
       icon: 'local-fire-department',
     },
     {
-      name: 'Play',
+      name: 'Diversão',
       icon: 'videogame-asset',
     },
     {
-      name: 'City',
+      name: 'Cidade',
       icon: 'apartment',
     },
     {
-      name: 'Beachfront',
+      name: 'Em frente à praia',
       icon: 'beach-access',
     },
     {
-      name: 'Countryside',
+      name: 'Campo',
       icon: 'nature-people',
     },
 ];
@@ -67,8 +67,8 @@ const ExploreHeader = ({ onCategoryChanged }: Props) => {
               <View style={styles.searchBtn}>
                 <Ionicons name="search" size={24} />
                 <View>
-                  <Text style={{ fontFamily: 'mon-sb' }}>Where to?</Text>
-                  <Text style={{ color: Colors.grey, fontFamily: 'mon' }}>Anywhere · Any week</Text>
+                  <Text style={{ fontFamily: 'mon-sb', fontSize: 12 }}>Para onde?</Text>
+                  <Text style={{ color: Colors.grey, fontFamily: 'mon', fontSize: 12 }}>Qualquer lugar · Qualquer semana</Text>
                 </View>
               </View>
             </TouchableOpacity>
@@ -95,7 +95,7 @@ const ExploreHeader = ({ onCategoryChanged }: Props) => {
               onPress={() => selectCategory(index)}>
               <MaterialIcons
                 name={item.icon as any}
-                size={24}
+                size={20}
                 color={activeIndex === index ? '#000' : Colors.grey}
               />
               <Text style={activeIndex === index ? styles.categoryTextActive : styles.categoryText}>
@@ -157,13 +157,13 @@ const styles = StyleSheet.create({
     borderRadius: 24,
   },
   categoryText: {
-    fontSize: 14,
-    fontFamily: 'mon-sb',
+    fontSize: 13,
+    fontFamily: 'mon',
     color: Colors.grey,
   },
   categoryTextActive: {
-    fontSize: 14,
-    fontFamily: 'mon-sb',
+    fontSize: 13,
+    fontFamily: 'mon',
     color: '#000',
   },
   categoriesBtn: {

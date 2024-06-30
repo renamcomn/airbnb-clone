@@ -16,35 +16,35 @@ const _layout = () => {
         <Tabs.Screen 
             name='index' 
             options={{ 
-                tabBarLabel: 'Explore',
+                tabBarLabel: 'Explorar',
                 tabBarIcon: ({ color, size }) => <Ionicons name='search' color={color} size={size} />
             }}
         />
         <Tabs.Screen 
             name='wishlists' 
             options={{ 
-                tabBarLabel: 'Wishlists',
+                tabBarLabel: 'Favoritos',
                 tabBarIcon: ({ color, size }) => <Ionicons name='heart-outline' color={color} size={size} />
             }}
         />
         <Tabs.Screen 
             name='trips' 
             options={{ 
-                tabBarLabel: 'Trips',
+                tabBarLabel: 'Viagens',
                 tabBarIcon: ({ color, size }) => <FontAwesome5 name='airbnb' color={color} size={size} />
             }}
         />
         <Tabs.Screen 
             name='inbox' 
             options={{ 
-                tabBarLabel: 'Inbox',
+                tabBarLabel: 'Mensagens',
                 tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name='message-outline' color={color} size={size} />
             }}
         />
         <Tabs.Screen 
             name='profile' 
             options={{ 
-                tabBarLabel: 'Profile',
+                tabBarLabel: 'Perfil',
                 tabBarIcon: ({ color, size }) => <Ionicons name='person-circle-outline' color={color} size={size} />
             }}
         />

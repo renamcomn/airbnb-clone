@@ -59,7 +59,7 @@ const Page = () => {
   return (
     <SafeAreaView style={defaultStyles.container}>
       <View style={styles.headerContainer}>
-        <Text style={styles.header}>Profile</Text>
+        <Text style={styles.header}>Perfil</Text>
         <Ionicons name="notifications-outline" size={26} />
       </View>
 
@@ -104,7 +104,7 @@ const Page = () => {
         </View>
       )}
 
-      {isSignedIn && <Button title="Log Out" onPress={() => signOut()} color={Colors.dark} />}
+      {isSignedIn && <Button title="Sair" onPress={() => signOut()} color={Colors.dark} />}
       {!isSignedIn && (
         <Link href={'/(modals)/login'} asChild>
           <Button title="Log In" color={Colors.dark} />
