@@ -9,20 +9,14 @@ interface Props {
     listings: any;
 }
 
-const INITIAL_REGION = {
-    latitude: 37.33,
-    longitude: -122,
-    latitudeDelta: 9,
-    longitudeDelta: 9,
-  };
 const ListingsMap = ({listings} : Props) => {
     const router = useRouter();
     const mapRef = useRef<any>(null);
     const [initialRegion, setInitialRegioan] = useState({
-        latitude: 0,
-        longitude: 0,
-        latitudeDelta: 7,
-        longitudeDelta: 7
+        latitude: -15.830569515555569,
+        longitude: -48.05873259414214,
+        latitudeDelta: 1,
+        longitudeDelta: 1
     })
     
     const onMarkerSelected = (event: any) => {
