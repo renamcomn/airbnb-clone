@@ -8,6 +8,7 @@ import 'react-native-reanimated';
 import * as SecureStore from 'expo-secure-store'
 import { ClerkProvider, useAuth } from '@clerk/clerk-expo';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import ModalHeaderText from '@/components/ModalHeaderText';
 
 const CLERK_PUBLISHABLE_KEY = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY
 
@@ -71,7 +72,6 @@ export default function RootLayout() {
     </ClerkProvider>
   )
   
-  
 }
 
 function RootLayoutNav() {
@@ -113,10 +113,7 @@ function RootLayoutNav() {
           presentation: 'transparentModal',
           animation: 'fade',
           headerTransparent: true,
-          title: 'Booking',
-          headerTitleStyle: {
-            fontFamily: 'mon-sb'
-          },
+          headerTitle: () => <ModalHeaderText />,
           headerLeft: () => (
             <TouchableOpacity onPress={() => router.back()}>
               <Ionicons name='close-outline' size={28} />
