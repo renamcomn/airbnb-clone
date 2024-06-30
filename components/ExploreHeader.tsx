@@ -41,7 +41,7 @@ interface Props {
     onCategoryChanged: (category: string) => void;
 }
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 const ExploreHeader = ({ onCategoryChanged }: Props) => {
     const scrollRef = useRef<ScrollView>(null);

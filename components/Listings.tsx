@@ -4,6 +4,7 @@ import { defaultStyles } from '@/constants/Styles';
 import { Link } from 'expo-router';
 import { TouchableOpacity } from '@gorhom/bottom-sheet';
 import { Ionicons } from '@expo/vector-icons';
+import Animated, { FadeInRight, FadeOutLeft } from 'react-native-reanimated';
 interface Props {
     listings: any[];
     category: string;
@@ -24,7 +25,7 @@ const Listings = ({ listings: items, category } : Props) => {
   const renderRow: ListRenderItem<any> = ({ item }) => (
     <Link href={`/listing/${item.id}`} asChild>
       <TouchableOpacity>
-        <View style={styles.listing}>
+        <Animated.View style={styles.listing} entering={FadeInRight} exiting={FadeOutLeft}>
           <Image source={{ uri: item.medium_url}} style={styles.image} />
           <TouchableOpacity style={{ position: 'absolute', right: 30, top: 30 }}>
             <Ionicons name='heart-outline' size={24} color={'#000'} />
@@ -41,7 +42,7 @@ const Listings = ({ listings: items, category } : Props) => {
             <Text style={{ fontFamily: 'mon-sb' }}>€ {item.price}</Text>
             <Text style={{ fontFamily: 'mon' }}>night</Text>
           </View>
-        </View>
+        </Animated.View>
       </TouchableOpacity>
     </Link>
   )

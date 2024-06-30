@@ -11,7 +11,6 @@ const Page = () => {
   const items = useMemo(() => listingsData as any, [])
 
   const onDataChangef = (category: string) => {
-    console.log('CHANGED CATEGORY: ', category)
     setCategory(category)
   }
 
