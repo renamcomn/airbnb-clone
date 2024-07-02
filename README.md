@@ -2,6 +2,11 @@
 
 Welcome to the Airbnb Clone project! This project is a mobile application built using React Native that replicates some core functionalities of Airbnb. 
 
+
+<p align="left">
+  <img src="https://github.com/renamcomn/airbnb-clone/assets/26748562/04fc601a-3c36-4d9b-b0ba-5ef6d0f26064" width="400" />
+</p>
+
 ## Features
 
 - User authentication
